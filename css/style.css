@@ -32,17 +32,18 @@
 
 html {
   color: #fff;
-  background-color: #fff;
   font-size: 62.5%;
+  background: #621402;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
 body {
   font-family: Roboto,sans-serif;
   font-size: 1.6rem;
+  line-height: 150%;
   font-weight: 400;
   min-height: 100vh;
-  background: url(../img/bg.jpg) top center/cover no-repeat;
+  background: #621402;
 }
 
 body.loading {
@@ -158,9 +159,160 @@ img {
   border-radius: 50%;
 }
 
+.main {
+  background: -webkit-gradient(linear,left top,left bottom,from(rgba(98,20,2,.31)),color-stop(85.62%,#621402)),url(../img/bg.jpg);
+  background: -o-linear-gradient(top,rgba(98,20,2,.31) 0,#621402 85.62%),url(../img/bg.jpg);
+  background: linear-gradient(180deg,rgba(98,20,2,.31) 0,#621402 85.62%),url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.main__film {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.film__info-subtitle {
+  opacity: .5;
+}
+
+.film__info-details {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.film__details-time {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.film__details-rating {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.film__trailer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.film__trailer svg {
+  width: 100%;
+  height: 100%;
+}
+
+.rating__text span {
+  font-size: 2.4rem;
+}
+
+.session {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-top: 1px solid rgba(255,255,255,.5);
+  border-bottom: 1px solid rgba(255,255,255,.5);
+}
+
+.session__date-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.session__date-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,.5);
+  border-radius: 5px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.nice-select {
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.5);
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.nice-select .list {
+  width: 100%;
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.5);
+  border-radius: 5px;
+}
+
+.nice-select .list .option.selected.focus {
+  background: #fe8e05;
+  color: #621402;
+}
+
 @media (min-width:768px) {
-  .header__container {
-    padding-top: 4rem;
+  .header {
+    position: absolute;
+    top: 4rem;
+    left: 13.5rem;
   }
 
   .header__logo {
@@ -193,6 +345,114 @@ img {
     width: 3.3rem;
     height: 3.3rem;
   }
+
+  .main {
+    height: 100vh;
+    padding-top: 15.3rem;
+  }
+
+  .film {
+    margin-bottom: 5.9rem;
+  }
+
+  .film__info {
+    max-width: 57rem;
+  }
+
+  .film__info-subtitle {
+    font-size: 2.4rem;
+    line-height: 150%;
+    margin-bottom: 1.1rem;
+  }
+
+  .film__info-title {
+    font-size: 3.6rem;
+    line-height: 4.2rem;
+    margin-bottom: 2.3rem;
+  }
+
+  .film__info-text {
+    margin-bottom: 4.7rem;
+  }
+
+  .film__trailer {
+    width: 10rem;
+    height: 10rem;
+    margin: auto;
+  }
+
+  .time:not(:last-child) {
+    margin-right: 3.4rem;
+  }
+
+  .time__icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1.4rem;
+  }
+
+  .rating__icon {
+    width: 3.5rem;
+    height: 1.75rem;
+    margin-right: 1.2rem;
+  }
+
+  .session {
+    padding-top: 4.6rem;
+    padding-bottom: 6.4rem;
+  }
+
+  .session__date-item {
+    width: 9rem;
+    height: 9rem;
+    margin-right: 9.5rem;
+  }
+
+  .session__date-item:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+
+  .session__date-day {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 3.5rem;
+  }
+
+  .session__date-week {
+    line-height: 2.2rem;
+  }
+
+  .session__cinema-select {
+    width: 47rem;
+    height: 6rem;
+    margin-right: 3rem;
+  }
+
+  .session__time-select {
+    width: 10.8rem;
+    height: 6rem;
+  }
+
+  .session-label {
+    display: block;
+  }
+
+  .session-label:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  .nice-select {
+    font-size: 1.6rem;
+  }
+
+  .nice-select::after {
+    right: 2rem;
+    height: .7rem;
+    width: .7rem;
+    border-bottom: 3px solid #fff;
+    border-right: 3px solid #fff;
+    top: 45%;
+  }
 }
 
 @media (min-width:768px) and (any-hover:hover) {
@@ -212,5 +472,15 @@ img {
 
   .user:hover .user__logo {
     opacity: .7;
+  }
+
+  .session__date-item:hover {
+    background: #fe8e05;
+    color: #621402;
+  }
+
+  .nice-select .list .option:hover {
+    background: #fe8e05;
+    color: #621402;
   }
 }
