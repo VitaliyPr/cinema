@@ -308,6 +308,109 @@ img {
   color: #621402;
 }
 
+.scheme__container {
+  background: rgba(36,36,36,.18);
+  border-radius: 10px;
+}
+
+.scheme__container svg {
+  width: 100%;
+  height: 100%;
+}
+
+.scheme__container path:not(.light) {
+  fill: rgba(255,255,255,.2);
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.scheme__container path.booked {
+  fill: rgba(255,255,255,.05);
+  cursor: not-allowed;
+}
+
+.scheme__container path.active {
+  fill: #fe8e05;
+}
+
+.legend {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-top: 1px solid rgba(255,255,255,.5);
+  padding-top: 2.2rem;
+  padding-bottom: 3.8rem;
+  margin: 0 7rem;
+}
+
+.legend svg {
+  width: 3.5rem;
+  height: 2.9rem;
+}
+
+.legend__label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.legend__text {
+  opacity: .5;
+}
+
+.legend__active .legend__text {
+  color: #fe8e05;
+  opacity: 1;
+}
+
+.price__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #fe8e05;
+  border-radius: 5px;
+  color: #fff;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
 @media (min-width:768px) {
   .header {
     position: absolute;
@@ -347,7 +450,6 @@ img {
   }
 
   .main {
-    height: 100vh;
     padding-top: 15.3rem;
   }
 
@@ -453,6 +555,49 @@ img {
     border-right: 3px solid #fff;
     top: 45%;
   }
+
+  .scheme {
+    margin-top: 6.3rem;
+    margin-bottom: 6.2rem;
+  }
+
+  .legend__label:not(:last-child) {
+    margin-right: 3rem;
+  }
+
+  .legend__text {
+    margin-left: 1.6rem;
+  }
+
+  .price {
+    margin-bottom: 16.3rem;
+  }
+
+  .price__label {
+    display: block;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .price__total {
+    font-size: 5.2rem;
+    line-height: 6.1rem;
+  }
+
+  .ruble {
+    font-size: 5.2rem;
+    line-height: 6.1rem;
+  }
+
+  .btn {
+    font-size: 1.8rem;
+  }
+
+  .btn__pay {
+    width: 25.4rem;
+    height: 6.9rem;
+  }
 }
 
 @media (min-width:768px) and (any-hover:hover) {
@@ -482,5 +627,22 @@ img {
   .nice-select .list .option:hover {
     background: #fe8e05;
     color: #621402;
+  }
+
+  .scheme__container path:not(.light):hover {
+    fill: rgba(255,255,255,.5);
+  }
+
+  .scheme__container path.booked:hover {
+    fill: rgba(255,255,255,.05);
+  }
+
+  .scheme__container path.active:hover {
+    fill: #fe8e05;
+  }
+
+  .btn:hover {
+    color: #621402;
+    background: #fff;
   }
 }
